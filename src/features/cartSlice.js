@@ -22,23 +22,16 @@ const cartSlice = createSlice({
     },
 
     getCartTotal: (state) => {  // Calcular el total de items agregados al carrito
-      let { totalQuantity, totalPrice } = state.cart.reduce(
+      let { totalQuantity } = state.cart.reduce(
         (cartTotal, cartItem) => {
-          console.log("carttotal", cartTotal);
-          console.log("cartitem", cartItem);
-          const { price, quantity } = cartItem;
-          console.log(price, quantity);
-          const itemTotal = price * quantity;
-          cartTotal.totalPrice += itemTotal;
+          const { quantity } = cartItem;
           cartTotal.totalQuantity += quantity;
           return cartTotal;
         },
         {
-          totalPrice: 0,
           totalQuantity: 0,
         }
       );
-      state.totalPrice = parseInt(totalPrice.toFixed(2));
       state.totalQuantity = totalQuantity;
     },
 

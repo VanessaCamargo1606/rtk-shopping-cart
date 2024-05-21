@@ -14,9 +14,10 @@ import { useSelector, useDispatch } from "react-redux";
 import { addToCart } from "../features/cartSlice";
 
 export default function App() {
-  const items = useSelector((state) => state.allCart.items);
+  
+  const items = useSelector((state) => state.allCart.items); // UseSelector extrae datos del estado global de redux
 
-  const dispatch = useDispatch();
+  const dispatch = useDispatch(); // Dispatch envía acciones al store de redux  
 
   return (
     <div className="m-2">
@@ -29,7 +30,7 @@ export default function App() {
                 <MDBCardBody>
                   <MDBCardTitle>{item.title}</MDBCardTitle>
                   <MDBCardText>{item.price}</MDBCardText>
-                  <MDBBtn onClick={() => dispatch(addToCart(item))}>
+                  <MDBBtn onClick={() => dispatch(addToCart(item))}>                   
                     Add to Cart
                   </MDBBtn>
                 </MDBCardBody>

@@ -10,8 +10,9 @@ export default function App() {
   const { cart, totalQuantity } = useSelector((state) => state.allCart);
 
   const dispatch = useDispatch();
+  
   useEffect(() => {
-    dispatch(getCartTotal());
+    dispatch(getCartTotal());  // ejecuta el reducer para calcular la cantidad de productos en el carrito
   }, [cart]);
 
   return (<div>
