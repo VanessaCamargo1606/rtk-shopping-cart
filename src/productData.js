@@ -41,7 +41,7 @@ export default [
     id: 1,
     title: "Leche Almendra Original",
     price:  11.455,
-    img: "https://exitocol.vtexassets.com/arquivos/ids/19958986/Forza-Almendra-Original-1429261_a.jpg?v=638328397147330000",
+    img: "https://guds-supply.com/wp-content/uploads/2024/02/bebidas-de-almendras-original-946ml.jpg",
     quantity: 1,
   },
   {
